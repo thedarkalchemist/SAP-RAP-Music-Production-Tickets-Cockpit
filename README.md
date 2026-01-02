@@ -10,6 +10,8 @@ Welcome to my **Music Production Cockpit**! This is a full-stack **SAP RAP (REST
 * **Leveling up in the Cloud ☁️**: I felt I was falling behind on the latest SAP Cloud tech. Building this cockpit was my personal "Magnum Opus" to master **RAP, BTP, and OData V4**.
 * **Organizing the Lab 🎼**: As a music producer (**Dark Alchemy**), I was getting lost in a sea of files and tickets. I needed a centralized place to manage my tracks and ensure nothing gets lost in the mix.
 
+<img width="1347" height="336" alt="image" src="https://github.com/user-attachments/assets/0db3fef3-757a-495f-9ef1-a3ec04802336" />
+
 ---
 
 ## ✨ What it does
@@ -19,6 +21,8 @@ Welcome to my **Music Production Cockpit**! This is a full-stack **SAP RAP (REST
 | **Telegram Integration** | With one click, I trigger a global action that sends a full production report to my Telegram. |
 | **Smart Prioritization** | My bot is trained to sort tickets by importance. It shows me the critical stuff (New/To-Do) first, so I know exactly where the "fire" is. 🔥 |
 | **Draft Protection** | I've implemented logic to keep my database clean from empty "ghost" entries, ensuring a smooth management experience. |
+
+<img width="766" height="680" alt="image" src="https://github.com/user-attachments/assets/cfdaf3cc-a7a3-46b7-8ccd-b07fb838553d" />
 
 ---
 
