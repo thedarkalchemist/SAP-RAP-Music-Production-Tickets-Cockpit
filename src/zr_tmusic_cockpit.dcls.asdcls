@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZR_TMUSIC_COCKPIT'
+@MappingRole: true
+define role ZR_TMUSIC_COCKPIT {
+  grant select on ZR_TMUSIC_COCKPIT
+  where TRUE;
+}

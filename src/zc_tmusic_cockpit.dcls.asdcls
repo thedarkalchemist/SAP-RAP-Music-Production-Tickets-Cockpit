@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_TMUSIC_COCKPIT'
+@MappingRole: true
+define role ZC_TMUSIC_COCKPIT {
+  grant select on ZC_TMUSIC_COCKPIT
+  where INHERITING CONDITIONS FROM ENTITY ZR_TMUSIC_COCKPIT REPLACING { ROOT WITH _BaseEntity };
+}

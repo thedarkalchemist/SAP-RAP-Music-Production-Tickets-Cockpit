@@ -1,0 +1,48 @@
+managed implementation in class ZBP_R_IVT_STATUS unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_IVT_STATUS alias ZrIvtStatus
+persistent table ZIV_T_STATUS
+extensible
+draft table ZIVT_STATUS_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   StatusID;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   StatusID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZIV_T_STATUS corresponding extensible
+  {
+    StatusID = status_id;
+    StatusDesc = status_desc;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+}

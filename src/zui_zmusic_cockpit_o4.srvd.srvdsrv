@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TMUSIC_COCKPIT'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TMUSIC_COCKPIT'
+  }
+}
+define service ZUI_ZMUSIC_COCKPIT_O4 {
+  expose ZC_TMUSIC_COCKPIT as Cockpit;
+  expose ZC_IVT_STATUS     as StatusHelp;
+}

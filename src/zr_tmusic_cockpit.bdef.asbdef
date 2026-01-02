@@ -1,0 +1,64 @@
+managed implementation in class ZBP_R_TMUSIC_COCKPIT unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TMUSIC_COCKPIT alias ZrTmusicCockpit
+persistent table ztmusic_cockpit
+extensible
+draft table ztmusic_cckpit_d
+//etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+{
+
+  determination setStatusText on modify { field StatusID; }
+
+  side effects { field StatusID affects field StatusDescription; }
+
+  field ( readonly )
+  TicketID,
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt,
+  LocalLastChangedAt;
+
+  field ( numbering : managed )
+  TicketID;
+
+  field ( mandatory ) ArtistName, TrackName, Bpm, IssueDesc, StatusID;
+
+
+  //field ( mandatory ) AudioContent;
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+  static action sendToTelegram;
+
+  mapping for ztmusic_cockpit corresponding extensible
+    {
+      TicketID           = ticket_id;
+      ArtistName         = artist_name;
+      TrackName          = track_name;
+      Bpm                = bpm;
+      IssueDesc          = issue_desc;
+      StatusID           = status_id;
+      AudioContent       = audio_content;
+      AudioMimeType      = audio_mime_type;
+      AudioFileName      = audio_filename;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LastChangedBy      = last_changed_by;
+      LastChangedAt      = last_changed_at;
+      LocalLastChangedAt = local_last_changed_at;
+      StatusCriticality  = statuscriticality;
+      StatusDescription  = statusdescription;
+    }
+
+}
